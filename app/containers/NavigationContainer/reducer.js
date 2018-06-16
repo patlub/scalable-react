@@ -7,7 +7,7 @@
 import { fromJS } from 'immutable';
 import {
   REQUEST_TOPICS_SUCCESS,
-  SELECT_TOPIC
+  SELECT_TOPIC,
 } from './constants';
 
 const initialState = fromJS({

@@ -1,9 +1,9 @@
 import { call, put } from 'redux-saga/effects';
 import { takeLatest } from 'redux-saga';
 import { REQUEST_TOPICS } from './constants';
-import { requestTopicsSuccess, requestTopicsFailure} from './actions';
+import { requestTopicsSuccess, requestTopicsFailure } from './actions';
 
-export function fetchTopicsFromServer(){
+export function fetchTopicsFromServer() {
   return fetch('http://localhost:3000/api/topics')
     .then(response => response.json());
 }

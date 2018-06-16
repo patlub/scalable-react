@@ -8,7 +8,7 @@ import {
   REQUEST_TOPICS,
   REQUEST_TOPICS_SUCCESS,
   REQUEST_TOPICS_FAILURE,
-  SELECT_TOPIC
+  SELECT_TOPIC,
 } from './constants';
 
 export function requestTopics() {
