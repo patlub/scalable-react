@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 import selectNavigationContainer from './selectors';
 import Navigation from '../../components/Navigation';
-import { requestTopics } from './actions';
+import { requestTopics, selecttopic } from './actions';
 
 export class NavigationContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -31,6 +31,7 @@ const mapStateToProps = selectNavigationContainer();
 function mapDispatchToProps(dispatch) {
   return {
     requestTopics: () => dispatch(requestTopics()),
+    selectTopic: topic => dispatch(selecttopic(topic)),
   };
 }
 
