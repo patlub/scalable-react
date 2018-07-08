@@ -10,11 +10,13 @@ import PropTypes from 'prop-types';
 
 import selectNavigationContainer from './selectors';
 import Navigation from '../../components/Navigation';
-import { requestTopics, selecttopic } from './actions';
+import { requestTopics, selecttopic, toggleDrawer } from './actions';
 
 export class NavigationContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     requestTopics: PropTypes.func.isRequired,
+    selectTopic: PropTypes.func.isRequired,
+    toggleDrawer: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.requestTopics();
@@ -32,6 +34,7 @@ function mapDispatchToProps(dispatch) {
   return {
     requestTopics: () => dispatch(requestTopics()),
     selectTopic: topic => dispatch(selecttopic(topic)),
+    toggleDrawer: () => dispatch(toggleDrawer()),
   };
 }
 
