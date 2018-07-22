@@ -10,7 +10,7 @@ import Link from '../Link';
 
 import styles from './styles.css';
 
-function LinkList({ links }) {
+function LinkList({ links, topicName }) {
   const linkNodes = links.map(link =>
     <Link
       key={link.id}
@@ -19,12 +19,14 @@ function LinkList({ links }) {
   );
   return (
     <div className={styles.linkList}>
+      {topicName}
       {linkNodes}
     </div>
   );
 }
 
 LinkList.propTypes = {
+  topicName: PropTypes.string.isRequired,
   links: PropTypes.arrayOf(PropTypes.shape({
     description: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,

@@ -38,12 +38,12 @@ function Link({ link }) {
 }
 
 Link.propTypes = {
-  link: PropTypes.arrayOf(PropTypes.shape({
+  link: PropTypes.shape({
     description: PropTypes.string.isRequired,
     voteCount: PropTypes.number.isRequired,
     url: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
-  })),
+  }),
 };
 
 export default Link;
